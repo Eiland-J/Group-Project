@@ -4,7 +4,7 @@ var wins = 0;
 var losses = 0;
 
 //Holds user inputs in an array 
-var yourChoices = [];
+var guessedLetters = [];
 var letterToGuess = null;
 var totalGuesses = 10;
 
@@ -14,6 +14,9 @@ function randomLetterGen() {
 }
 randomLetterGen();
 function updatedTotalGuesses(){
-    document.querySelector("#guesses-left").innerHTML = totalGuesses;
+    document.querySelector("#some-id").innerHTML = totalGuesses;
 }
-
+updatedTotalGuesses();
+function updateGuesses() {
+    document.querySelector("#some-id").innerHTML = guessedLetters.join(", ");
+}
